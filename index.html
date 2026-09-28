@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rimpa Digital Service</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7ff;
+    color:#222;
+    line-height:1.6;
+}
+
+/* ===== HERO ===== */
+
+header{
+    background:linear-gradient(135deg,#1677ff,#6a35ff);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.logo{
+    width:150px;
+    height:150px;
+    border-radius:30px;
+    margin-bottom:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.20);
+}
+
+header h1{
+    font-size:44px;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:20px;
+    max-width:750px;
+    margin:auto;
+}
+
+.hero-btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:18px 40px;
+    background:white;
+    color:#1677ff;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+/* ===== NAVIGATION ===== */
+
+nav{
+    background:#123477;
+    padding:18px 10px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    margin:0 14px;
+}
+
+nav a:hover{
+    color:#7dd3fc;
+}
+
+/* ===== COMMON SECTION ===== */
+
+section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+section h2{
+    font-size:42px;
+    color:#1677ff;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    color:#555;
+    font-size:18px;
+    max-width:700px;
+    margin:0 auto 45px;
+}
+
+/* ===== ABOUT ===== */
+
+.about-box{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.about-box p{
+    font-size:19px;
+}
+
+/* ===== SERVICES ===== */
+
+.services{
+    background:#eef3ff;
+}
+
+.services-container{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.service-card{
+    background:white;
+    padding:30px 20px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+}
+
+.service-icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.service-card h3{
+    color:#1677ff;
+    font-size:23px;
+    margin-bottom:10px;
+}
+
+.service-card p{
+    color:#555;
+}
+
+/* ===== PORTFOLIO ===== */
+
+.portfolio-container{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.portfolio-card{
+    background:white;
+    padding:30px 20px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.portfolio-card h3{
+    color:#1677ff;
+    margin-bottom:10px;
+}
+
+/* ===== REVIEWS ===== */
+
+.reviews{
+    background:#eef3ff;
+}
+
+.review-container{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.review{
+    background:white;
+    padding:30px 20px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.stars{
+    color:#ffb000;
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.review p{
+    color:#555;
+}
+
+/* ===== CONTACT ===== */
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.contact-box p{
+    font-size:18px;
+    margin:12px 0;
+}
+
+.contact-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 30px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    background:#123477;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+footer p{
+    margin:5px;
+}
+
+/* ===== WHATSAPP BUTTON ===== */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:25px;
+    width:65px;
+    height:65px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:32px;
+    box-shadow:0 6px 20px rgba(0,0,0,.25);
+    z-index:2000;
+}
+
+/* ===== BACK TO TOP ===== */
+
+.top{
+    position:fixed;
+    right:20px;
+    bottom:105px;
+    width:55px;
+    height:55px;
+    background:white;
+    color:#123477;
+    border:2px solid #222;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:28px;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:800px){
+
+    header{
+        padding:55px 15px;
+    }
+
+    header h1{
+        font-size:34px;
+    }
+
+    header p{
+        font-size:18px;
+    }
+
+    .logo{
+        width:130px;
+        height:130px;
+    }
+
+    nav a{
+        font-size:15px;
+        margin:0 7px;
+    }
+
+    section{
+        padding:60px 15px;
+    }
+
+    section h2{
+        font-size:34px;
+    }
+
+    .services-container,
+    .portfolio-container,
+    .review-container{
+        grid-template-columns:1fr;
+    }
+
+    .about-box{
+        padding:25px 18px;
+    }
+
+    .about-box p{
+        font-size:17px;
+    }
+}
+
+@media(max-width:450px){
+
+    nav{
+        padding:15px 5px;
+    }
+@media (max-width:600px){
+
+  nav a{
+    font-size:14px;
+    margin:0 5px;
+  }
+
+  header h1{
+    font-size:32px;
+    line-height:1.2;
+  }
+
+  header p{
+    font-size:17px;
+    line-height:1.6;
+  }
+
+  .hero-btn{
+    font-size:16px;
+    padding:14px 22px;
+  }
+
+  section{
+    padding:50px 18px;
+    width:100%;
+    overflow:hidden;
+  }
+
+  h2{
+    font-size:32px;
+  }
+
+  .subtitle{
+    font-size:17px;
+    line-height:1.6;
+  }
+
+  .review-container{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .review{
+    width:100%;
+  }
+
+  .contact-box{
+    width:100%;
+  }
+
+  footer{
+    text-align:center;
+    padding:30px 15px;
+  }
+
+  .whatsapp{
+    width:58px;
+    height:58px;
+    right:16px;
+    bottom:18px;
+  }
+
+  .top{
+    width:55px;
+    height:55px;
+    right:18px;
+    bottom:88px;
+  }
+
+}
+    }
+</style>
+</head>
+
+<body>
+
+
+
+
+<!-- ===== HERO ===== -->
+
+<header id="top">
+
+    <img src="logo.svg" class="logo" alt="Rimpa Digital Service Logo">
+
+    <h1>Rimpa Digital Service</h1>
+
+    <p>
+        Professional Website, Digital Marketing &amp;
+        Graphic Design Services
+    </p>
+
+    <a href="#services" class="hero-btn">
+        Explore Our Services
+    </a>
+
+</header>
+
+
+<!-- ===== NAVIGATION ===== -->
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+
+<!-- ===== ABOUT ===== -->
+
+<section id="about">
+
+    <h2>About Us</h2>
+
+    <p class="subtitle">
+        Creative digital solutions for businesses, brands and individuals.
+    </p>
+
+    <div class="about-box">
+
+        <p>
+            Welcome to <strong>Rimpa Digital Service</strong>.
+            We provide modern and professional digital solutions
+            for businesses, brands and individuals.
+        </p>
+
+        <br>
+
+        <p>
+            Our goal is to help you build a strong online presence
+            with beautiful websites, creative graphics and effective
+            digital marketing solutions.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ===== SERVICES ===== -->
+
+<section id="services" class="services">
+
+    <h2>Our Services</h2>
+
+    <p class="subtitle">
+        We provide professional digital services to help your business grow.
+    </p>
+
+    <div class="services-container">
+
+        <div class="service-card">
+            <div class="service-icon">🌐</div>
+            <h3>Website Design</h3>
+            <p>
+                Modern, responsive and professional websites
+                for businesses and individuals.
+            </p>
+        <h3 class="price">₹4,999 <span>থেকে</span></h3>
+
+<a href="https://wa.me/917585960403?text=I%20want%20to%20order%20Website%20Design"
+   class="order-btn"
+   target="_blank">
+   Order Now
+</a>
+        
+        
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">📱</div>
+            <h3>Digital Marketing</h3>
+            <p>
+                Social media and online marketing solutions
+                to reach more customers.
+            </p>
+       <h3 class="price">₹2,999 <span>প্রতি মাসে থেকে</span></h3>
+
+<a href="https://wa.me/917585960403?text=I%20want%20to%20order%20Digital%20Marketing"
+   class="order-btn"
+   target="_blank">
+   Order Now
+</a>
+        
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🎨</div>
+            <h3>Graphic Design</h3>
+            <p>
+                Creative posters, banners, social media designs
+                and promotional graphics.
+            </p>
+       <h3 class="price">₹499 <span>থেকে</span></h3>
+
+<a href="https://wa.me/917585960403?text=I%20want%20to%20order%20Graphic%20Design"
+   class="order-btn"
+   target="_blank">
+   Order Now
+</a>
+        
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">💼</div>
+            <h3>Business Website</h3>
+            <p>
+                Professional websites designed specially
+                for small and growing businesses.
+            </p>
+        <h3 class="price">₹9,999 <span>থেকে</span></h3>
+
+<a href="https://wa.me/917585960403?text=I%20want%20to%20order%20Business%20Website"
+   class="order-btn"
+   target="_blank">
+   Order Now
+</a>
+       
+        
+        
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">📣</div>
+            <h3>Social Media Design</h3>
+            <p>
+                Attractive posts and promotional designs
+                for Facebook, Instagram and other platforms.
+            </p>
+        <h3 class="price">₹999 <span>থেকে</span></h3>
+
+<a href="https://wa.me/917585960403?text=I%20want%20to%20order%20Social%20Media%20Design"
+   class="order-btn"
+   target="_blank">
+   Order Now
+</a>
+        
+        
+        
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3>Website Maintenance</h3>
+            <p>
+                Website updates, improvements and basic
+                maintenance services.
+            </p>
+       <h3 class="price">₹999 <span>প্রতি মাসে থেকে</span></h3>
+        
+        <a href="https://wa.me/917585960403?text=I%20want%20to%20order%20Website%20Maintenance"
+   class="order-btn"
+   target="_blank">
+   Order Now
+        </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== PORTFOLIO ===== -->
+
+<section id="portfolio">
+
+    <h2>Our Portfolio</h2>
+
+    <p class="subtitle">
+        Some of the digital projects and services we can create for you.
+    </p>
+
+    <div class="portfolio-container">
+
+        <div class="portfolio-card">
+            <h3>🌐 Business Website</h3>
+            <p>
+                Clean and professional website for your business.
+            </p>
+        </div>
+
+        <div class="portfolio-card">
+            <h3>🎨 Social Media Design</h3>
+            <p>
+                Attractive promotional posts and graphics.
+            </p>
+        </div>
+
+        <div class="portfolio-card">
+            <h3>📢 Marketing Campaign</h3>
+            <p>
+                Digital marketing solutions for better online reach.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== REVIEWS ===== -->
+
+<section id="reviews"ĥ class="reviews">
+
+    <h2>Client Reviews</h2>
+
+    <p class="subtitle">
+        We always try to provide quality service to our clients.
+    </p>
+
+    <div class="review-container">
+
+        <div class="review">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "Very professional service and beautiful design."
+            </p>
+
+            <br>
+
+            <strong>Happy Client</strong>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "The website looks modern and works perfectly on mobile."
+            </p>
+
+            <br>
+
+            <strong>Business Client</strong>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "Excellent communication and creative work."
+            </p>
+
+            <br>
+
+            <strong>Valued Client</strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== CONTACT ===== -->
+
+<section id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p class="subtitle">
+        Ready to start your digital project? Contact us today.
+    </p>
+<div class="contact-box">
+
+    <h3>Rimpa Digital Service</h3>
+
+    <p>📱 WhatsApp: 917585960403</p>
+
+    <p>🌐 Website Design</p>
+    <p>📢 Digital Marketing</p>
+    <p>🎨 Graphic Design</p>
+    <p>📱 Social Media Design</p>
+
+    <a href="https://wa.me/917585960403?text=I%20want%20to%20contact%20Rimpa%20Digital%20Service"
+       class="order-btn"
+       target="_blank"
+       rel="noopener">
+       Contact on WhatsApp
+    </a>
+
+</div>
+  
+    <div class="contact-box">
+
+        <p>
+            📱 <strong>WhatsApp:</strong>
+            +91 75859 60403
+        </p>
+
+        <p>
+            💻 <strong>Rimpa Digital Service</strong>
+        </p>
+
+        <a
+            href="https://api.whatsapp.com/send?phone=917585960403"
+            class="contact-btn"
+            target="_blank"
+            rel="noopener"
+        >
+            💬 Contact on WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+
+<footer>
+
+    <p>
+        <strong>Rimpa Digital Service</strong>
+    </p>
+
+    <p>
+        Professional Digital Solutions
+    </p>
+
+    <p>
+        © 2026 Rimpa Digital Service. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+
+<a
+    href="https://wa.me/917585960403"
+    class="whatsapp"
+    target="_blank"
+    rel="noopener"
+    aria-label="WhatsApp"
+>
+    💬
+</a>
+
+
+<!-- ===== BACK TO TOP ===== -->
+
+<a
+    href="#top"
+    class="top"
+    aria-label="Back to top"
+>
+    ↑
+</a>
+
+
+</>
+</html>
